@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peridot Enterprises | Private Investigator – Arizona</title>
+  <meta name="description" content="Licensed Arizona Private Investigator. Insurance fraud, missing persons, digital forensics, employment investigations & more. Free consultation.">
+  <style>
+    :root {
+      --green: #7CB518;
+      --green-dark: #5A8A0F;
+      --gold: #B8860B;
+      --gold-light: #D4A84B;
+      --dark: #1A1A1A;
+      --gray: #444;
+      --light-gray: #F7F7F5;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eee;
+      padding: 0.9rem 1.5rem;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #C5E063, #7CB518 45%, #4A7A0A 80%);
+      box-shadow: 0 2px 8px rgba(124,181,24,0.35), inset 0 1px 3px rgba(255,255,255,0.4);
+      flex-shrink: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    nav a {
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--green-dark);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 0.75rem 1.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--green);
+      color: var(--green-dark);
+    }
+
+    .btn-outline:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #F8FBF3 0%, #FFFFFF 60%);
+      padding: 5rem 1.5rem 4.5rem;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.1rem;
+      color: var(--dark);
+    }
+
+    .hero h1 span {
+      color: var(--green-dark);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .license-badge {
+      display: inline-block;
+      margin-top: 1.8rem;
+      font-size: 0.9rem;
+      color: var(--gray);
+      background: var(--light-gray);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+    }
+
+    /* Sections */
+    section {
+      padding: 4.5rem 1.5rem;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 750;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      font-size: 1.1rem;
+    }
+
+    .gold-line {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0.8rem auto 0;
+    }
+
+    /* Services */
+    .services {
+      background: var(--light-gray);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 1.6rem 1.4rem;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+      transform: translateY(-3px);
+    }
+
+    .service-card h3 {
+      font-size: 1.05rem;
+      font-weight: 650;
+      margin-bottom: 0.35rem;
+      color: var(--dark);
+    }
+
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--gray);
+    }
+
+    /* About */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .about-points {
+      margin-top: 1.5rem;
+    }
+
+    .about-points li {
+      list-style: none;
+      padding: 0.4rem 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+
+    .about-points li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .about-visual {
+      background: linear-gradient(145deg, #E8F5D0, #F7FBF0);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      border: 1px solid #e0ecd0;
+    }
+
+    .about-visual .big-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #C5E063, #7CB518 45%, #4A7A0A 80%);
+      box-shadow: 0 8px 30px rgba(124,181,24,0.3), inset 0 2px 6px rgba(255,255,255,0.35);
+      margin: 0 auto 1.5rem;
+    }
+
+    .about-visual h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .about-visual p {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    /* Contact */
+    .contact {
+      background: var(--dark);
+      color: white;
+    }
+
+    .contact .section-title h2,
+    .contact .section-title p {
+      color: white;
+    }
+
+    .contact .gold-line {
+      background: var(--gold-light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 1.1rem;
+      align-items: flex-start;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 2px;
+    }
+
+    .contact-form {
+      background: rgba(255,255,255,0.06);
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+      color: #ccc;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #888;
+    }
+
+    .contact-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .contact-form .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #999;
+      text-align: center;
+      padding: 1.8rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #bbb;
+    }
+
+    footer a:hover {
+      color: var(--gold-light);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .about-content,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 3.5rem 1.2rem 3rem;
+      }
+      section {
+        padding: 3.5rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-circle"></div>
+        <span>PERIDOT ENTERPRISES</span>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn">Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Licensed Private Investigator<br><span>in Arizona</span></h1>
+      <p>Discreet, professional investigative services for individuals and businesses. Evidence you can trust.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Request Free Consultation</a>
+        <a href="tel:4804856603" class="btn btn-outline">Call (480) 485-6603</a>
+      </div>
+      <div class="license-badge">Arizona License No. 1836125</div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <div class="section-title">
+        <h2>Investigative Services</h2>
+        <div class="gold-line"></div>
+        <p>Comprehensive support for complex cases</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Insurance Fraud</h3>
+          <p>Thorough investigation of suspicious claims and fraudulent activity.</p>
+        </div>
+        <div class="service-card">
+          <h3>Workers’ Compensation</h3>
+          <p>Surveillance and documentation for workers’ comp cases.</p>
+        </div>
+        <div class="service-card">
+          <h3>Employment Fraud</h3>
+          <p>Background checks, workplace investigations, and verification.</p>
+        </div>
+        <div class="service-card">
+          <h3>Infidelity Investigations</h3>
+          <p>Discreet surveillance and evidence gathering for personal matters.</p>
+        </div>
+        <div class="service-card">
+          <h3>Anti-Stalking</h3>
+          <p>Protection-focused investigations and documentation.</p>
+        </div>
+        <div class="service-card">
+          <h3>Missing Persons</h3>
+          <p>Locating individuals and gathering critical information.</p>
+        </div>
+        <div class="service-card">
+          <h3>Cold Cases</h3>
+          <p>Fresh eyes and modern methods on unresolved matters.</p>
+        </div>
+        <div class="service-card">
+          <h3>Evidence Gathering</h3>
+          <p>Court-ready documentation and professional reporting.</p>
+        </div>
+        <div class="service-card">
+          <h3>Digital Forensics</h3>
+          <p>Recovery and analysis of digital evidence.</p>
+        </div>
+        <div class="service-card">
+          <h3>ADA Violations</h3>
+          <p>Investigation and documentation of accessibility issues.</p>
+        </div>
+        <div class="service-card">
+          <h3>Individual Education Plans</h3>
+          <p>Support and fact-finding related to IEP matters.</p>
+        </div>
+        <div class="service-card">
+          <h3>Artificial Intelligence</h3>
+          <p>Identifying activities that involve artificial intelligence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Peridot Enterprises</h2>
+          <p>Peridot Enterprises is a licensed private investigative firm serving Arizona. We provide discreet, thorough, and professional investigative services tailored to the needs of individuals, attorneys, and businesses.</p>
+          <p>Every case is handled with strict confidentiality and a commitment to obtaining accurate, usable evidence.</p>
+          <ul class="about-points">
+            <li>Arizona Licensed Private Investigator</li>
+            <li>Free in-person consultation</li>
+            <li>Discreet & confidential service</li>
+            <li>Clear, professional reporting</li>
+          </ul>
+        </div>
+        <div class="about-visual">
+          <div class="big-circle"></div>
+          <h3>Walter Nelson</h3>
+          <p>Owner & Licensed Private Investigator<br>License No. 1836125</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="section-title">
+        <h2>Get in Touch</h2>
+        <div class="gold-line"></div>
+        <p>Contact us for a free, confidential consultation</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:4804856603">(480) 485-6603</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:peridot.investigations.az@gmail.com">peridot.investigations.az@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div>
+              <strong>License</strong>
+              Arizona Private Investigator License No. 1836125
+            </div>
+          </div>
+          <div class="contact-item">
+            <div>
+              <strong>Service Area</strong>
+              Arizona (Statewide)
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="mailto:peridot.investigations.az@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" placeholder="Briefly describe your situation..." required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Peridot Enterprises · Licensed Arizona Private Investigator · License No. 1836125</p>
+    <p style="margin-top:0.4rem"><a href="mailto:peridot.investigations.az@gmail.com">peridot.investigations.az@gmail.com</a> · <a href="tel:4804856603">(480) 485-6603</a></p>
+  </footer>
+
+</body>
+</html>

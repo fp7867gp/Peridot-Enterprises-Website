@@ -577,18 +577,26 @@
           </div>
         </div>
         <div class="contact-form">
-          <form action="mailto:peridot.investigations.az@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+          <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="20e31a1a-7421-4c44-9a64-02c48633159b">
+  <input type="hidden" name="subject" value="New message from Peridot Enterprises website">
+  <input type="checkbox" name="botcheck" style="display:none">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email" required>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" placeholder="Your name" required>
 
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="Your email" required>
 
-            <label for="message">How can we help?</label>
-            <textarea id="message" name="message" placeholder="Briefly describe your situation..." required></textarea>
+  <label for="phone">Phone</label>
+  <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+
+  <label for="message">How can we help?</label>
+  <textarea id="message" name="message" placeholder="Briefly describe your situation..." required></textarea>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+</form>
 
             <button type="submit" class="btn">Send Message</button>
           </form>
